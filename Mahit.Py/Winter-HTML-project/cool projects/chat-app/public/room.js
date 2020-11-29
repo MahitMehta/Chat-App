@@ -92,3 +92,11 @@ function addMessage({ content, name, color, id }) {
         behavior: "smooth",
     });
 }
+
+function adjustMessageHeight() {
+    document.body.style = `${window.innerHeight}px`;
+    messages.style.height = `${window.innerHeight - 90}px`;
+}
+
+window.addEventListener("DOMContentLoaded", adjustMessageHeight);
+window.addEventListener("resize", adjustMessageHeight);
